@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_texture_land"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_medium"
+    tools:context=".HistoryActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/spacing_normal"
+        android:paddingBottom="@dimen/spacing_normal"
+        android:paddingStart="@dimen/spacing_normal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="@string/history_title"
+                android:textColor="@color/gold_metallic"
+                android:textSize="@dimen/text_huge" />
+
+            <ImageButton
+                android:id="@+id/btnClearHistory"
+                android:layout_width="@dimen/icon_size_small_x"
+                android:layout_height="@dimen/icon_size_small_x"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/desc_clear_history"
+                android:padding="@dimen/spacing_small"
+                android:src="@drawable/ic_delete"
+                android:tint="@color/text_gray_light" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.15"
+            android:text="@string/label_wins_caps"
+            android:textColor="@color/dialog_text"
+            android:textSize="@dimen/text_tiny" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:background="@drawable/bg_card_dark"
+            android:padding="@dimen/card_padding">
+
+            <TextView
+                android:id="@+id/tvLabelChampion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.15"
+                android:text="@string/label_champion"
+                android:textColor="@color/secondary_yellow"
+                android:textSize="@dimen/text_extra_tiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPlayer1Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxtiny"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/text_off_white"
+                android:textSize="@dimen/text_large_x"
+                app:layout_constraintEnd_toStartOf="@+id/ivTrophy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelChampion"
+                tools:text="Alpha" />
+
+            <ImageView
+                android:id="@+id/ivTrophy"
+                android:layout_width="@dimen/icon_size_small_x"
+                android:layout_height="@dimen/icon_size_small_x"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_first_medal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:background="@color/white_22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPlayer1Name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/label_total_wins"
+                android:textColor="@color/text_gray_light"
+                android:textSize="@dimen/text_tiny"
+                app:layout_constraintBottom_toBottomOf="@+id/tvWins1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvWins1" />
+
+            <TextView
+                android:id="@+id/tvWins1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small_x"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/secondary_yellow"
+                android:textSize="@dimen/text_display_tiny"
+                app:layout_constraintEnd_toEndOf="@+id/ivTrophy"
+                app:layout_constraintStart_toStartOf="@+id/ivTrophy"
+                app:layout_constraintTop_toBottomOf="@id/divider1"
+                tools:text="42" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_card_dark"
+            android:padding="@dimen/card_padding">
+
+            <TextView
+                android:id="@+id/tvLabelContender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.15"
+                android:text="@string/label_contender"
+                android:textColor="@color/text_gray_light"
+                android:textSize="@dimen/text_extra_tiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPlayer2Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxtiny"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/text_off_white"
+                android:textSize="@dimen/text_large_x"
+                app:layout_constraintEnd_toStartOf="@+id/ivShield"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelContender"
+                tools:text="Ômega" />
+
+            <ImageView
+                android:id="@+id/ivShield"
+                android:layout_width="@dimen/icon_size_small_x"
+                android:layout_height="@dimen/icon_size_small_x"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_second_medal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:background="@color/white_22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPlayer2Name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/label_total_wins"
+                android:textColor="@color/text_gray_light"
+                android:textSize="@dimen/text_tiny"
+                app:layout_constraintBottom_toBottomOf="@+id/tvWins2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvWins2" />
+
+            <TextView
+                android:id="@+id/tvWins2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small_x"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/text_gray_light"
+                android:textSize="@dimen/text_display_tiny"
+                app:layout_constraintEnd_toEndOf="@+id/ivShield"
+                app:layout_constraintStart_toStartOf="@+id/ivShield"
+                app:layout_constraintTop_toBottomOf="@id/divider2"
+                tools:text="28" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/spacing_normal"
+        android:paddingBottom="@dimen/spacing_normal"
+        android:paddingEnd="@dimen/spacing_normal"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/listRank"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:background="@drawable/bg_card_dark"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_normal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.15"
+                android:text="@string/label_ranking"
+                android:textColor="@color/gold_metallic"
+                android:textSize="@dimen/text_small" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_tiny"
+                android:background="@color/white_22" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/layoutPlayersList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartMatch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_small"
+            android:background="@drawable/bt_finish"
+            android:letterSpacing="0.1"
+            android:text="@string/btn_start_match"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small_x"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+
+</LinearLayout>

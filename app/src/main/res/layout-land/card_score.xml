@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_card_dark"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_normal">
+
+    <TextView
+        android:id="@+id/tvTeamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:letterSpacing="0.15"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/text_large"
+        tools:text="time A" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="00"
+        android:textColor="#C8A84B"
+        android:textSize="@dimen/text_display_xlarge" />
+
+    <LinearLayout
+        android:id="@+id/rowChips1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnPlus1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@null"
+            android:contentDescription="+1"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_one" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnPlus3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@null"
+            android:contentDescription="+3"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_three" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnPlus6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@null"
+            android:contentDescription="+6"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_six" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowChips2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/spacing_tiny">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnPlus9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@null"
+            android:contentDescription="+9"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_nine" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnPlus12"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@null"
+            android:contentDescription="+12"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_twelve" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnUndo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@null"
+            android:contentDescription="Desfazer"
+            android:src="@android:drawable/ic_menu_revert" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_height"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>
