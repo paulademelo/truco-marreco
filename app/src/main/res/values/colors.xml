@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_yellow">#F5D555</color>
+    <color name="secondary_yellow">#C8A84B</color>
+    <color name="dialog_text">#F1EEED</color>
+    <color name="primary_green">#0F3624</color>
+    <color name="text_gray_light">#C1BEBE</color>
+    <color name="text_brown_dark">#201806</color>
+    <color name="text_gray_medium">#666866</color>
+    <color name="text_off_white">#E1DEDD</color>
+    <color name="gold_primary">#E9C349</color>
+    <color name="gold_metallic">#D4AF37</color>
+    <color name="white_44">#44FFFFFF</color>
+    <color name="white_22">#22FFFFFF</color>
+    <color name="white_1a">#1AFFFFFF</color>
+    <color name="off_white">#F2F2F2</color>
+    <color name="dark_golden_rod">#B8860B</color>
+    <color name="button_finish_dark">#7A0000</color>
+    <color name="button_reset_dark">#7A5900</color>
+    <color name="red_accent">#C62828</color>
+    <color name="red_blood">#B71C1C</color>
+    <color name="red_light">#EF5350</color>
+    <color name="card_dark_start">#2A3028</color>
+    <color name="card_dark_end">#1A1F1A</color>
+    <color name="background_deep">#041E12</color>
+    <color name="edit_text_bg">#3A3F3A</color>
+    <color name="edit_text_start">#1C1E1C</color>
+    <color name="edit_text_end">#0D0F0D</color>
+    <color name="gold_vintage">#D4A817</color>
+</resources>

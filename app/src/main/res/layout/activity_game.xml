@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_texture"
+    android:padding="@dimen/spacing_normal"
+    tools:context=".GameActivity">
+
+    <include
+        android:id="@+id/cardTeam1"
+        layout="@layout/card_score"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:layout_marginEnd="@dimen/spacing_normal"
+        app:layout_constraintBottom_toTopOf="@+id/cardTeam2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <include
+        android:id="@+id/cardTeam2"
+        layout="@layout/card_score"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_medium"
+        app:layout_constraintBottom_toTopOf="@+id/buttons"
+        app:layout_constraintEnd_toEndOf="@id/cardTeam1"
+        app:layout_constraintStart_toStartOf="@id/cardTeam1"
+        app:layout_constraintTop_toBottomOf="@+id/cardTeam1" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/cardTeam1"
+        app:layout_constraintStart_toStartOf="@id/cardTeam1"
+        app:layout_constraintTop_toBottomOf="@+id/cardTeam2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReset"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bt_reset"
+            android:letterSpacing="0.05"
+            android:text="@string/btn_reset"
+            android:textAllCaps="true"
+            android:textColor="@color/text_brown_dark"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFinishGame"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bt_finish"
+            android:letterSpacing="0.05"
+            android:text="@string/btn_view_history"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

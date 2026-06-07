@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.ChoraMarreco" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/primary_green</item>
+        <item name="android:statusBarColor">@color/primary_green</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ChoraMarreco" parent="Base.Theme.ChoraMarreco" />
+
+    <style name="Theme.ChoraMarreco.Launcher" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_launcher</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/primary_green</item>
+        <item name="android:statusBarColor">@color/primary_green</item>
+    </style>
+
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/white_1a" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/spacing_normal"
+        android:paddingEnd="@dimen/spacing_normal"
+        android:paddingTop="@dimen/spacing_small"
+        android:paddingBottom="@dimen/spacing_small"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvRank"
+            android:layout_width="@dimen/text_display_xlarge"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textColor="@color/secondary_yellow"
+            android:textSize="@dimen/text_small_x"
+            android:textStyle="bold"
+            tools:text="#3" />
+
+        <TextView
+            android:id="@+id/tvPlayerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.05"
+            android:textColor="@color/text_off_white"
+            android:textSize="@dimen/text_small"
+            tools:text="ÔMEGA" />
+
+        <TextView
+            android:id="@+id/tvPlayerWins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textColor="@color/secondary_yellow"
+            android:textSize="@dimen/text_small_x"
+            android:textStyle="bold"
+            tools:text="40 vitórias" />
+
+    </LinearLayout>
+
+</LinearLayout>

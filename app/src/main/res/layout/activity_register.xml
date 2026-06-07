@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_texture"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_texture_land"
+        android:padding="@dimen/spacing_normal"
+        tools:context=".RegisterActivity">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_normal"
+            android:layout_marginEnd="@dimen/spacing_normal"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.15"
+            android:text="@string/main_title"
+            android:textAllCaps="true"
+            android:textColor="@color/gold_primary"
+            android:textSize="@dimen/text_huge"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.20" />
+
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/main_subtitle"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large"
+            app:layout_constraintEnd_toEndOf="@id/title"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <LinearLayout
+            android:id="@+id/cardPlayers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:background="@drawable/bg_card_dark"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_normal"
+            app:layout_constraintEnd_toEndOf="@+id/subTitle"
+            app:layout_constraintStart_toStartOf="@+id/subTitle"
+            app:layout_constraintTop_toBottomOf="@id/subTitle">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.15"
+                android:text="@string/label_player_1"
+                android:textColor="@color/secondary_yellow"
+                android:textSize="@dimen/text_small" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/InputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:hint="@string/hint_player_name_1"
+                app:placeholderText="@string/default_player_1"
+                app:placeholderTextColor="@color/text_gray_light"
+                app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                app:startIconTint="@color/white_44">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/player1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_56dp"
+                    android:background="@null"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_medium" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large">
+
+                <View
+                    android:id="@+id/dividerLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@color/white_44"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/vs"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/vs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/spacing_normal"
+                    android:paddingEnd="@dimen/spacing_normal"
+                    android:text="@string/label_vs"
+                    android:textColor="@color/text_gray_medium"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/dividerRight"
+                    app:layout_constraintStart_toEndOf="@+id/dividerLeft"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/dividerRight"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@color/white_44"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vs"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.15"
+                android:text="@string/label_player_2"
+                android:textColor="@color/secondary_yellow"
+                android:textSize="@dimen/text_small" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/InputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:hint="@string/hint_player_name_2"
+                app:placeholderText="@string/default_player_2"
+                app:placeholderTextColor="@color/text_gray_light"
+                app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                app:startIconTint="@color/white_44">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/player2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_56dp"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPersonName"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_medium" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/btnCoin"
+            layout="@layout/bt_coin"
+            android:layout_width="@dimen/coin_size_medium"
+            android:layout_height="@dimen/coin_size_medium"
+            android:layout_marginTop="@dimen/spacing_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardPlayers" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

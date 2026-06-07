@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Chora Marreco</string>
+
+    <string name="main_title">Vamos iniciar</string>
+    <string name="main_subtitle">Escreva os nomes dos jogadores ou do time</string>
+    <string name="label_player_1">JOGADOR 1 | TIME 1</string>
+    <string name="label_player_2">JOGADOR 2 | TIME 2</string>
+    <string name="hint_player_name_1">Nome do jogador 1</string>
+    <string name="hint_player_name_2">Nome do jogador 2</string>
+    <string name="label_vs">vs</string>
+
+    <string name="btn_reset">Reiniciar</string>
+    <string name="default_player_1">Alpha</string>
+    <string name="default_player_2">Ômega</string>
+
+    <string name="dialog_yes">Sim</string>
+    <string name="dialog_no">Não</string>
+    <string name="dialog_cancel">Cancelar</string>
+
+    <string name="dialog_reset_title">Reiniciar a partida</string>
+    <string name="dialog_reset_message">Deseja voltar para a tela principal?</string>
+
+    <string name="dialog_winner_title">Ponto para %1$s!</string>
+    <string name="dialog_winner_message">%1$s venceu a rodada!</string>
+    <string name="btn_play_again">Jogar novamente</string>
+    <string name="btn_view_history">Ver histórico</string>
+
+    <string name="dialog_undo_title">Desfazer</string>
+    <string name="dialog_undo_message">Deseja zerar a pontuação atual de %1$s?</string>
+
+    <string name="history_title">Hall da Fama</string>
+    <string name="label_wins_caps">VITÓRIAS</string>
+    <string name="label_champion">CAMPEÃO</string>
+    <string name="label_contender">VICE-CAMPEÃO</string>
+    <string name="label_total_wins">Total de vitórias</string>
+    <string name="label_ranking">RANKING</string>
+    <string name="btn_start_match">INICIAR NOVA PARTIDA</string>
+    <string name="desc_clear_history">Limpar histórico</string>
+
+    <string name="dialog_clear_history_title">Limpar histórico</string>
+    <string name="dialog_clear_history_message">Isso apagará todas as vitórias e jogadores salvos. Deseja continuar?</string>
+
+    <string name="format_rank">#%1$d</string>
+    <string name="format_wins">%1$d vitórias</string>
+
+    <string name="desc_btn_coin">botão iniciar partida</string>
+    <string name="btn_coin_title">INICIAR</string>
+    <string name="btn_coin_subtitle">Partida</string>
+
+    <string name="desc_plus_1">+1</string>
+    <string name="desc_plus_3">+3</string>
+    <string name="desc_plus_6">+6</string>
+    <string name="desc_plus_9">+9</string>
+    <string name="desc_plus_12">+12</string>
+    <string name="desc_undo">Desfazer</string>
+    <string name="truco_marker">MARCADOR DE TRUCO</string>
+    <string name="insert">Inserir</string>
+    <string name="names">nomes</string>
+</resources>
