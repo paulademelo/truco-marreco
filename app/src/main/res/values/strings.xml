@@ -26,7 +26,7 @@
     <string name="btn_view_history">Ver histórico</string>
 
     <string name="dialog_undo_title">Desfazer</string>
-    <string name="dialog_undo_message">Deseja zerar a pontuação atual de %1$s?</string>
+    <string name="dialog_undo_message">Deseja desfazer a contagem dos pontos de %1$s?</string>
 
     <string name="history_title">Hall da Fama</string>
     <string name="label_wins_caps">VITÓRIAS</string>

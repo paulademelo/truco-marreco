@@ -39,12 +39,14 @@ class RegisterActivity : AppCompatActivity() {
             }
 
             startActivity(intent)
+            resetViews()
         }
 
         binding.player2.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 binding.player2.clearFocus()
-                val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                val inputMethodManager =
+                    getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                 inputMethodManager.hideSoftInputFromWindow(binding.player2.windowToken, 0)
                 true
             } else false
@@ -55,6 +57,11 @@ class RegisterActivity : AppCompatActivity() {
         super.onSaveInstanceState(outState)
         outState.putString(KEY_PLAYER_1, binding.player1.text.toString())
         outState.putString(KEY_PLAYER_2, binding.player2.text.toString())
+    }
+
+    private fun resetViews() {
+        binding.player1.setText("")
+        binding.player2.setText("")
     }
 
     companion object {

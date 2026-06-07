@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,8 +19,8 @@ class GameActivity : AppCompatActivity() {
     private var isDialogShowing = false
     private var score1 = 0
     private var score2 = 0
-    private var lastScore1 = 0
-    private var lastScore2 = 0
+    private val scoreHistory1 = mutableListOf<Int>()
+    private val scoreHistory2 = mutableListOf<Int>()
 
     private lateinit var player1: String
     private lateinit var player2: String
@@ -130,13 +131,13 @@ class GameActivity : AppCompatActivity() {
         if (isDialogShowing) return
 
         val newScore = if (player == 1) {
-            lastScore1 = score1
+            scoreHistory1.add(score1)
             score1 += points
             binding.cardTeam1.tvScore.text = score1.toString()
             binding.cardTeam1.tvScore.animateScoreChange()
             score1
         } else {
-            lastScore2 = score2
+            scoreHistory2.add(score2)
             score2 += points
             binding.cardTeam2.tvScore.text = score2.toString()
             binding.cardTeam2.tvScore.animateScoreChange()
@@ -187,6 +188,20 @@ class GameActivity : AppCompatActivity() {
 
     private fun showUndoDialog(player: Int) {
         val name = if (player == 1) player1 else player2
+        val hasHistory = if (player == 1) {
+            scoreHistory1.isNotEmpty()
+        } else {
+            scoreHistory2.isNotEmpty()
+        }
+
+        if (!hasHistory) {
+            Toast.makeText(
+                this,
+                "Não há pontuação para desfazer.",
+                Toast.LENGTH_SHORT
+            ).show()
+            return
+        }
 
         showGameDialog(
             title = getString(R.string.dialog_undo_title),
@@ -195,11 +210,13 @@ class GameActivity : AppCompatActivity() {
             negativeText = getString(R.string.dialog_no),
             onPositiveClick = {
                 if (player == 1) {
-                    score1 = lastScore1
-                    binding.cardTeam1.tvScore.text = "0"
+                    score1 = scoreHistory1.removeLast()
+                    binding.cardTeam1.tvScore.text = score1.toString()
+                    binding.cardTeam1.tvScore.animateScoreChange()
                 } else {
-                    score2 = lastScore2
-                    binding.cardTeam2.tvScore.text = "0"
+                    score2 = scoreHistory2.removeLast()
+                    binding.cardTeam2.tvScore.text = score2.toString()
+                    binding.cardTeam2.tvScore.animateScoreChange()
                 }
             }
         )
@@ -208,8 +225,8 @@ class GameActivity : AppCompatActivity() {
     private fun resetScores() {
         score1 = 0
         score2 = 0
-        lastScore1 = 0
-        lastScore2 = 0
+        scoreHistory1.clear()
+        scoreHistory2.clear()
         binding.cardTeam1.tvScore.text = "0"
         binding.cardTeam2.tvScore.text = "0"
     }
