@@ -6,13 +6,11 @@ Marcador de pontuação para o jogo de Truco, desenvolvido em Android nativo com
 
 ## 📱 Telas
 
-| Home                          | Cadastro                              |
-|-------------------------------|---------------------------------------|
-| ![Home](screenshots/home.png) | ![Cadastro](screenshots/register.png) |
-
-| Jogo                          | Histórico                             |
-|-------------------------------|---------------------------------------|
-| ![Jogo](screenshots/game.png) | ![Histórico](screenshots/history.png) |
+|                                            Home                                            |                                                Cadastro                                                |
+|:------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------:|
+| <a href="screenshots/home.png"><img src="screenshots/home.png" width="250" alt="Home"></a> | <a href="screenshots/register.png"><img src="screenshots/register.png" width="250" alt="Cadastro"></a> |
+|                                          **Jogo**                                          |                                             **Histórico**                                              |
+| <a href="screenshots/game.png"><img src="screenshots/game.png" width="250" alt="Jogo"></a> | <a href="screenshots/history.png"><img src="screenshots/history.png" width="250" alt="Histórico"></a>  |
 
 ---
 
@@ -77,7 +75,8 @@ Run > Run 'app'
 
 ## 📋 Requisitos atendidos
 
-Este app foi desenvolvido como projeto de avaliação da disciplina de Android Básico da UTFPR, atendendo aos
+Este app foi desenvolvido como projeto de avaliação da disciplina de Android Básico da UTFPR,
+atendendo aos
 seguintes requisitos:
 
 | # | Requisitos da avaliação                                            | Status |
